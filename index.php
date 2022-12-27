@@ -235,7 +235,7 @@
 
   <div class="newsletter parallax">
     <div class="contenido contenedor">
-      <p>registrate al newsletter</p>
+      <p>Registrate al newsletter</p>
       <h3>gdlwebcamp</h3>
       <a href="#" class="button transparent">registro</a>
     </div><!-- .contenido-->
