@@ -1,5 +1,5 @@
 <!-- Incluye el el archivo del header global -->
-<?php include_once 'includes/templates/header.php'; ?>
+<?php include 'includes/templates/header.php'; ?>
 
 <section class="seccion contenedor">
     <h2>Calendario de eventos</h2>
@@ -8,6 +8,13 @@
     try {
         // abrir la conexion
         require_once('includes/funciones/bd_conexion.php');
+
+        // include y require sirve para añadir ficheros externos al codigo php
+        //con include si hay una falla (no exista el archivo) nos alertará y 
+        //seguirá ejecutandose el script (por eso se utiliza en parte que no son 
+        //tan importantes como cabeceras), mientras que con require
+        // al ocurrir un error no ejecuuta el script (se utiliza para acciones vitales )
+
         /*Para hacer join de tablas deben tener el mismo nombre de la tabla original y no de la que se incluye en la otra tabla */
         $sql = "SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
         $sql .= " FROM eventos ";

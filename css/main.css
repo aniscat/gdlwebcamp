@@ -717,8 +717,9 @@ div.newsletter .contenido {
 }
 div.newsletter .contenido p{
   font-size: 1.2em;
-  /* text-transform: lowercase; */
-}
+  /* text-transform: lowercase;*/
+ }
+
 div.newsletter .contenido h3{
   color: #fff;
   text-transform: uppercase;
