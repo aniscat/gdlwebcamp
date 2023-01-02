@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <!-- <meta charset="iso-8859-1" > -->
   <title>GDLWebCamp</title>
   <meta name="description" content="Página sobre la empresa P.G y CIA Contadores Públicos">
   <meta name="viewport" content="width=device-width, initial-scale=1">

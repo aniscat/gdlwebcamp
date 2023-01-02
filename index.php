@@ -66,7 +66,7 @@
               <p><i class="fa-solid fa-user-large"></i> Harold García</p>
             </div>
             <div class="detalle-evento">
-              <h3>Aprende a porgramar en una mañana</h3>
+              <h3>Aprende a programar en una mañana</h3>
               <p><i class="fa-regular fa-clock"></i> 10:00hrs</p>
               <p><i class="fa-regular fa-calendar"></i> 11 de Dic</p>
               <p><i class="fa-solid fa-user-large"></i> Susana Rivera</p>
