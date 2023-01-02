@@ -25,9 +25,11 @@
     <p class="copyright">Todos los derechos reservados GDLWEBCAMP 2016</p>
   </footer>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <!-- Modernizr nos ayuda a detectar la compatibilidad del html y css de los navegadores, y en caso de no ser compatible se implementa una variante  -->
   <script src="js/plugins.js"></script>
   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
   <script src="js/jquery.js"></script>
+  <script src="js/jquery.colorbox-min.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/jquery.countdown.min.js"></script>
   <script src="js/jquery.lettering.js"></script>
