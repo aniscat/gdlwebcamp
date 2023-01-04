@@ -25,13 +25,26 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+    <!-- como hacer que los archivos se cargue en distintas páginas -->
+  <?php 
+  // me pueden hakear el sitio con este $_SERVER['PHP_SELF']
+   $archivo = basename($_SERVER['PHP_SELF']);//rETORNA EL NOMBRE DEL ARCHIVO ACTUAL
+   $pagina = str_replace(".php","",$archivo);//como primer parametro de la funcion que se quiere hacer, por quee, y la fuente de los datos
+if ($pagina =='invitados'||$pagina =='index') {
+  echo' <link rel="stylesheet" href="css/colorbox.css">';
+}else if ($pagina == 'conferencia'){
+  echo'<link rel="stylesheet" href="css/lightbox.css">';
+}
+  ?>
+  
+
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/colorbox.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+
+<body class="<?php echo $pagina ?>">
 
   <!-- Add your site or application content here -->
 

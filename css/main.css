@@ -780,7 +780,7 @@ p.copyright{
 }
 /*******Internas********/
 /*Conferencia*/
-body.conferencia .navegacion-principal .activo{
+ .navegacion-principal .activo{
   border-bottom: 3px solid #fe4918;
 }
 div.galeria a{
@@ -952,6 +952,15 @@ div.dia i {
   color: #fe4818;
   font-size: 1.6em;
 }
+/*Colorbox*/
+div.cboxElement{
+  padding: 30px !important;
+  text-align: center;
+}
+div.cboxElement img{
+  margin: 0 auto;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

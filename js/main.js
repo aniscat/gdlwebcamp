@@ -206,6 +206,11 @@ $(function () {
     $('.navegacion-principal').slideToggle();
   })
 
+  //Agregar clase a menú(para que quede subrayado cuando estemos en esa pagina)
+  $('body.conferencia .navegacion-principal a:contains("Conferencia")').addClass('activo');
+  $('body.calendario .navegacion-principal a:contains("Calendario")').addClass('activo');
+  $('body.invitados .navegacion-principal a:contains("Invitados")').addClass('activo');
+  $('body.reservaciones .navegacion-principal a:contains("Reservaciones")').addClass('activo');
 
   //Programa de conferencias
   $('div.ocultar:first').show();
@@ -251,7 +256,7 @@ $(function () {
 
   //Cuenta regresiva
 
-  $('.cuenta-regresiva').countdown('2022/12/10 09:00:00', function (event) {
+  $('.cuenta-regresiva').countdown('2023/12/10 09:00:00', function (event) {
     $('#dias').text(event.strftime('%D'))
     $('#horas').text(event.strftime('%H'))
     $('#minutos').text(event.strftime('%M'))
