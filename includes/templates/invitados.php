@@ -24,7 +24,7 @@
         $resultado = $conn->query($sql);
         //query() es una funcion de php para hacer la consulta
     } catch (Exception $e) {
-        echo $e->getMessage;
+        echo $e->$getMessage;
     }
     ?>
     <section class="invitados contenedor seccion">

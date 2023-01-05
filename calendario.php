@@ -39,7 +39,7 @@
         $resultado = $conn->query($sql);
         //query() es una funcion de php para hacer la consulta
     } catch (Exception $e) {
-        echo $e->getMessage;
+        echo $e->$getMessage;
     }
     ?>
     <div class="calendario">
@@ -85,10 +85,11 @@
                 //PARA WINDOWS
                 // setlocale(LC_TIME, 'spanish');
                 //hay un probrema con los acentos
+                // utf8_encode($string); con esto se resuleve el problema ;)
                 setlocale(LC_TIME, 'es_ES', 'Spanish_Spain', 'Spanish');
 
            // sttrtotime conviente un string a fecha
-                echo strftime("%A %e de %B del %Y", strtotime($dia)); ?>
+                echo utf8_encode(strftime("%A %e de %B del %Y", strtotime($dia))); ?>
 
             </h3>
             <?php
@@ -100,7 +101,7 @@
                     <p class="titulo"> <i class="<?php echo $evento['icono'] ?>" aria-hidden="true"></i> <?php echo $evento['titulo']; ?></p>
                     <!-- Hora  y fecha del evento -->
                     <p class="hora"><i class="fa-regular fa-clock" aria-hidden="true"></i>
-                        <?php echo $evento['fecha'] . " " . $evento['hora']; ?> </p>
+                        <?php echo $evento['fecha'] . " " . str_replace(":00.000000","",$evento['hora']);?> hrs </p>
                     <!-- Nombre del invitado -->
                     <p> <i class="fa-regular fa-user" aria-hidden="true"></i><?php echo " " . $evento['invitado']; ?></p>
                 </div>
