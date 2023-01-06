@@ -48,6 +48,11 @@
     //Extras
     var etiquetas = document.getElementById('etiqueta_evento');
     var camisas = document.getElementById('camisa_evento');
+    
+    //para deshabilitar el boton registro si no se calculo antes el total a pagar
+    btnRegistro.disabled = true;
+
+
     if (document.getElementById('calcular')) {
 
       calcular.addEventListener('click', calcularMontos, false);
@@ -101,6 +106,10 @@
 
           sumaTotal.innerHTML = '$' + total.toFixed(2);
           // console.log("$"+total);
+
+          //habilando el boton de registro
+          btnRegistro.disabled = false;
+          document.getElementById('total_pedido').value = total;
         }
 
       }

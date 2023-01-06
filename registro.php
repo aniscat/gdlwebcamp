@@ -3,14 +3,17 @@
 
 <section class="seccion contenedor">
   <h2>Registro de usuarios</h2>
-  <form action="" id="registro" class="registro" method="post">
+  <form action="validar_registro.php" id="registro" class="registro" method="post">
+    <!-- las formas de enviar info al server son $post y get. se diferencian en que una envia info de forma visible(get) y la otra de forma no visible(post)
+    para enviarla el navegador anteas la codifica mediante URL encoding
+  -->
     <div id="datos_usuario" class="registro caja clearfix">
       <div class="campo">
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre">
       </div>
       <div class="campo">
-        <label for="nombre">Apellido</label>
+        <label for="apellido">Apellido</label>
         <input type="text" id="apellido" name="apellido" placeholder="Tu Apellido">
       </div>
       <div class="campo">
@@ -34,7 +37,7 @@
             </ul>
             <div class="orden">
               <label for="pase_dia">Boletos deseados:</label>
-              <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+              <input type="number" min="0" id="pase_dia" size="3" name="boletos[]"  placeholder="0">
             </div>
           </div>
         </li>
@@ -50,7 +53,7 @@
             </ul>
             <div class="orden">
               <label for="pase_completo">Boletos deseados:</label>
-              <input type="number" min="0" id="pase_completo" size="3" placeholder="0">
+              <input type="number" min="0" id="pase_completo" size="3" name="boletos[]"  placeholder="0">
             </div>
           </div>
         </li>
@@ -66,7 +69,7 @@
             </ul>
             <div class="orden">
               <label for="pase_dosdias">Boletos deseados:</label>
-              <input type="number" min="0" id="pase_dosdias" size="3" placeholder="0">
+              <input type="number" min="0" id="pase_dosdias" size="3" name="boletos[]"  placeholder="0">
             </div>
           </div>
         </li>
@@ -151,19 +154,19 @@
     <div class="extras">
       <div class="orden">
         <label for="camisa_evento">Camisa del evento $10<small> (promoción 7%dto.)</small></label>
-        <input type="number" min="0" id="camisa_evento" size="3" placeholder="0">
+        <input type="number" min="0" id="camisa_evento" size="3" name="pedido_camisas" placeholder="0">
       </div><!-- .order-->
       <div class="orden">
         <label for="etiquetas">Paquete de 10 etiquetas $2<small> (HTML5, CSS3, JavaScript, PHP, MySQL)</small></label>
-        <input type="number" min="0" id="etiqueta_evento" size="3" placeholder="0">
+        <input type="number" min="0" id="etiqueta_evento" size="3" name ="pedido_etiquetas" placeholder="0">
       </div><!-- .order-->
       <div class="orden">
         <label for="regalo">Seleccione un regalo</label> <br>
-        <select id="regalo" required>
-          <option value="">-- Seleccione un regalo --</option>
-          <option value="ETI">Etiquetas</option>
-         <option value="PUL">Pulsera</option>
-         <option value="PLU">Plumas</option>
+        <select name="regalo" id="regalo" required>
+          <option  value="">-- Seleccione un regalo --</option>
+          <option value="2">Etiquetas</option>
+         <option value="1">Pulsera</option>
+         <option value="3">Plumas</option>
         </select>
       </div><!-- .order-->
 
@@ -178,7 +181,9 @@
       <div id="suma_total">
 
       </div>
-      <input type="submit" id="btnRegistro" class="button" value="Pagar" disabled>
+      <input type="hidden" name="total_pedido" id="total_pedido" >
+      <input type="submit" id="btnRegistro" name="submit" class="button" value="Pagar" >
+      <!-- el nombre y el valor son importantes cuando se va a enviar informacion al server que obtenemos del formulario, ya que esta se guarda en un arreglo asociativo y toma ese nombre y valor -->
     </div><!-- .total-->
 
   </div> <!-- .caja-->
